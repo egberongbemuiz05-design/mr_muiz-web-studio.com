@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Message Sent Successfully</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+          rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="images/design1.png">
+    
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:'Poppins', sans-serif;
+            background:#050505;
+            color:white;
+
+            display:flex;
+            align-items:center;
+            justify-content:center;
+
+            min-height:100vh;
+
+            overflow:hidden;
+        }
+
+        /* BACKGROUND GLOW */
+        body::before{
+            content:"";
+            position:absolute;
+
+            width:500px;
+            height:500px;
+
+            background:gold;
+
+            filter:blur(180px);
+
+            opacity:0.15;
+
+            border-radius:50%;
+
+            top:-100px;
+            right:-100px;
+        }
+
+        /* SUCCESS BOX */
+        .success-container{
+            position:relative;
+            z-index:2;
+
+            width:90%;
+            max-width:650px;
+
+            background:#111;
+
+            border:1px solid rgba(255,255,255,0.08);
+
+            border-radius:30px;
+
+            padding:60px 40px;
+
+            text-align:center;
+
+            box-shadow:0 0 40px rgba(0,0,0,0.6);
+
+            animation:fadeUp 1s ease;
+        }
+
+        /* ICON */
+        .success-icon{
+            width:100px;
+            height:100px;
+
+            background:gold;
+            color:black;
+
+            border-radius:50%;
+
+            display:flex;
+            align-items:center;
+            justify-content:center;
+
+            margin:auto;
+            margin-bottom:30px;
+
+            font-size:3rem;
+            font-weight:bold;
+
+            box-shadow:0 0 30px rgba(255,215,0,0.5);
+        }
+
+        /* TITLE */
+        .success-container h1{
+            font-size:3rem;
+            margin-bottom:20px;
+            color:gold;
+        }
+
+        /* TEXT */
+        .success-container p{
+            color:#ccc;
+            font-size:1.1rem;
+            line-height:1.8;
+            margin-bottom:15px;
+        }
+
+        /* BUTTONS */
+        .success-buttons{
+            margin-top:35px;
+
+            display:flex;
+            gap:20px;
+            justify-content:center;
+            flex-wrap:wrap;
+        }
+
+        .btn{
+            padding:15px 35px;
+
+            border-radius:50px;
+
+            text-decoration:none;
+
+            font-weight:600;
+
+            transition:0.4s;
+        }
+
+        .btn-primary{
+            background:gold;
+            color:black;
+        }
+
+        .btn-outline{
+            border:2px solid gold;
+            color:white;
+        }
+
+        .btn:hover{
+            transform:translateY(-5px);
+        }
+
+        /* SMALL TEXT */
+        .small-text{
+            margin-top:30px;
+            font-size:0.9rem;
+            color:#888;
+        }
+
+        /* ANIMATION */
+        @keyframes fadeUp{
+
+            from{
+                opacity:0;
+                transform:translateY(40px);
+            }
+
+            to{
+                opacity:1;
+                transform:translateY(0);
+            }
+
+        }
+
+        /* MOBILE */
+        @media(max-width:768px){
+
+            .success-container{
+                padding:40px 25px;
+            }
+
+            .success-container h1{
+                font-size:2rem;
+            }
+
+            .success-container p{
+                font-size:1rem;
+            }
+
+            .success-icon{
+                width:80px;
+                height:80px;
+                font-size:2rem;
+            }
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <!-- SUCCESS CARD -->
+    <div class="success-container">
+
+        <!-- ICON -->
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <!-- TITLE -->
+        <h1>Message Sent!</h1>
+
+        <!-- MESSAGE -->
+        <p>
+            Thank you for contacting
+            <strong>Mr_muiz Web Studio</strong>.
+        </p>
+
+        <p>
+            Your message has been received successfully
+            and we’ll reply shortly.
+        </p>
+
+        <!-- BUTTONS -->
+        <div class="success-buttons">
+
+            <a href="index.html"
+               class="btn btn-primary">
+
+               Back to Home
+
+            </a>
+
+            <a href="https://wa.me/2348143638666"
+               target="_blank"
+               class="btn btn-outline">
+
+               Chat on WhatsApp
+
+            </a>
+
+        </div>
+
+        <!-- SMALL TEXT -->
+        <p class="small-text">
+            Premium websites for businesses, brands & entrepreneurs.
+        </p>
+
+    </div>
+
+</body>
+</html>
